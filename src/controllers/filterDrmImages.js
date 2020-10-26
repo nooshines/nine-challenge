@@ -1,12 +1,11 @@
 const filterDrmImages =(tvShows)=>{
-  const images =[];
-  tvShows.forEach( tvShow => {
+  return tvShows.reduce((acc,tvShow)=>{
     const {drm,episodeCount,image, slug,title} = tvShow ;
-    if (drm && episodeCount>0 && image && slug && title){
-      images.push({image:image.showImage,slug,title})
-    }
-  });
-  return images 
+  if (drm && episodeCount>0 && image && slug && title){
+    acc.push({image:image.showImage,slug,title})
+  }
+  return acc;
+  },[])
 }
 
 
