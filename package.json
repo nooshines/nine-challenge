@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/tvShows.bundle.js",
     "build": "webpack"
   },
   "author": "",
